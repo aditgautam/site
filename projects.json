@@ -1,0 +1,38 @@
+[
+  {
+    "title": "public transit behavioral analysis",
+    "year": "2026",
+    "description": "An investigation into how riders make transit decisions, using behavioral data to surface patterns in access, reliability, and use.",
+    "tags": ["data analysis", "transportation"]
+  },
+  {
+    "title": "under pressure",
+    "year": "2025",
+    "description": "A study of the relationship between stress, coping strategies, and academic performance among college students.",
+    "tags": ["research", "data science"]
+  },
+  {
+    "title": "america on fire",
+    "year": "2025",
+    "description": "An interactive view of wildfire activity across the United States, designed to make spatial and seasonal patterns easier to understand.",
+    "tags": ["mapping", "visualization"]
+  },
+  {
+    "title": "c++ relational database",
+    "year": "2025",
+    "description": "A relational database built from first principles in C++, with a focus on query execution, data structures, and reliable persistence.",
+    "tags": ["C++", "systems"]
+  },
+  {
+    "title": "sfml graphing calculator",
+    "year": "2024",
+    "description": "A desktop graphing calculator that parses expressions and renders functions in an interactive SFML interface.",
+    "tags": ["C++", "SFML"]
+  },
+  {
+    "title": "interactive battleship",
+    "year": "2024",
+    "description": "A complete take on the classic strategy game, with interactive placement, turn logic, and a responsive game board.",
+    "tags": ["game design", "C++"]
+  }
+]
