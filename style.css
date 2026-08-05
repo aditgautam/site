@@ -124,17 +124,64 @@ h2 {
   margin: 0 0 16px;
 }
 
-.project-actions { display: flex; flex-wrap: wrap; gap: 14px; margin: 15px 0 0; }
-.project-actions a { font-size: 13px; }
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 17px 0 0;
+  color: var(--muted);
+  font-style: italic;
+}
+.project-actions a { font-size: 12px; text-decoration-color: var(--line); }
+.project-actions a::before { content: "["; }
+.project-actions a::after { content: "]"; }
+.project-actions-featured {
+  justify-content: flex-start;
+  margin: 1px 0 15px;
+  color: #2563b8;
+  font-style: normal;
+}
+.project-actions-featured a { font-size: 13px; font-weight: 600; }
+.project-actions-featured a::before,
+.project-actions-featured a::after { content: none; }
+
+.project-note {
+  margin: 14px 0 0;
+  text-align: center;
+  color: var(--faint);
+  font-size: 12px;
+  font-style: italic;
+}
 
 .project-meta { display: flex; flex-wrap: wrap; gap: 7px; }
 .project-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 4px 8px;
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--muted);
   font-size: 12px;
 }
+.tag-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: #97938c;
+}
+.tag-python .tag-dot { background: conic-gradient(from 45deg, #ffd343 0 50%, #3776ab 50%); }
+.tag-cpp .tag-dot { background: #659ad2; }
+.tag-javascript .tag-dot { background: #e3c731; }
+.tag-web .tag-dot { background: linear-gradient(135deg, #e34f26 0 50%, #2965f1 50%); }
+.tag-database .tag-dot { background: #4b9cd3; }
+.tag-d3 .tag-dot { background: #f28e2b; }
+.tag-ml .tag-dot { background: #d06a9d; }
+.tag-research .tag-dot { background: #8b6bb1; }
+.tag-ui .tag-dot { background: #df7f72; }
+.tag-systems .tag-dot { background: #65737e; }
 
 .connect ul { margin: 0; padding: 0; list-style: none; }
 .connect li { margin-bottom: 12px; font-size: 15px; }
@@ -159,6 +206,7 @@ h2 {
 }
 
 :root[data-theme="dark"] .project-body p { color: #c8c6c0; }
+:root[data-theme="dark"] .project-actions-featured { color: #74a9f5; }
 :root[data-theme="dark"] .connect img { filter: invert(1); }
 :root[data-theme="dark"] .connect .icon-github { filter: none; }
 

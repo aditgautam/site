@@ -1,38 +1,63 @@
 [
   {
+    "title": "scpadb",
+    "year": "2026",
+    "description": [
+      "A historical scoring database for competitive indoor marching percussion. It turns 127 scattered CompetitionSuite recaps into one queryable history of 4,441 performances and 56,910 caption level scores. A correction aware Python pipeline handles ingestion and derivation, using stable keys, content hashes, reviewed resolution rules, and SQLite views to rebuild the whole database reproducibly.",
+      "The browser app downloads the 23 MB SQLite database and runs indexed SQL through sql.js and WebAssembly, powering season leaderboards, show recaps, ensemble histories, and interactive D3 score trends.",
+      "A companion research pipeline predicts an ensemble's end of season score from its debut performance, building season aware cohorts and evaluating Ridge and gradient boosting models with temporal cross-validation, ablations, clustered bootstrap intervals, and a genuinely untouched 2025-2026 holdout. Ridge landed at 2.676 MAE and 0.769 R² across 207 held out performances."
+    ],
+    "tags": ["Python", "SQL", "JavaScript", "HTML/CSS", "data engineering", "machine learning", "UI/UX"],
+    "links": [
+      { "label": "live web app", "url": "https://aditgautam.github.io/scpadb", "featured": true },
+      { "label": "database repo", "url": "https://github.com/aditgautam/scpadb" },
+      { "label": "parser repo", "url": "https://github.com/aditgautam/cs-parse" },
+      { "label": "writeup", "url": "" }
+    ]
+  },
+  {
     "title": "public transit behavioral analysis",
     "year": "2026",
-    "description": "An investigation into how riders make transit decisions, using behavioral data to surface patterns in access, reliability, and use.",
-    "tags": ["data analysis", "transportation"]
+    "description": "An original 49-participant study of how people choose between transit and driving, framed around resource-rational decision making. I designed a 21-item survey with six forced choice scenarios, each built to isolate a single bias, then wrote the full Python pipeline for cleaning, theory driven composite scoring, subgroup analysis, and visualization. I also formalized transit choice as a utility model mapping weighted perceptions to a probability of riding. The responses pointed to coverage and convenience, not fare cost, as the main reported barrier, which contrasts with the fare reduction focus of several current transit policies.",
+    "tags": ["Python", "pandas", "SciPy", "research", "transportation"],
+    "repo": ""
   },
   {
     "title": "under pressure",
     "year": "2025",
-    "description": "A study of the relationship between stress, coping strategies, and academic performance among college students.",
-    "tags": ["research", "data science"]
+    "description": "An applied machine learning study of academic performance built on 63,828 de-identified responses from the University of Michigan affiliated Healthy Minds Study. I helped build the data pipeline and developed the modeling workflow, using stratified evaluation, class weighting, and balanced accuracy to pull population level signal out of heavily imbalanced survey data while documenting the limits of individual level prediction.",
+    "tags": ["Python", "scikit-learn", "pandas", "machine learning", "research"],
+    "repo": ""
   },
   {
     "title": "america on fire",
     "year": "2025",
-    "description": "An interactive view of wildfire activity across the United States, designed to make spatial and seasonal patterns easier to understand.",
-    "tags": ["mapping", "visualization"]
+    "description": "An interactive exploration of 123,726 U.S. wildfire observations from NASA's MODIS instruments, built with D3 and vanilla JavaScript. It layers monthly state and county choropleths, spatial point-in-polygon aggregation across all 124K records, and animated drill down, with a scrolly-telling presentation that walks you through the story in the data.",
+    "note": "won 'best project', 'people's choice', dsc106 fall 2025",
+    "tags": ["JavaScript", "HTML/CSS", "D3.js", "geospatial", "data visualization", "UI/UX"],
+    "links": [
+      { "label": "live web app", "url": "https://dylandsouza.com/america-on-fire/", "featured": true }
+    ]
   },
   {
-    "title": "c++ relational database",
+    "title": "C++ relational database",
     "year": "2025",
-    "description": "A relational database built from first principles in C++, with a focus on query execution, data structures, and reliable persistence.",
-    "tags": ["C++", "systems"]
+    "description": "A SQL-like database engine written from first principles in C++, no parser libraries involved. It runs input through a custom finite state tokenizer and parser, converts WHERE conditions to postfix with a shunting-yard pass, and evaluates them row by row over an RPN stack. Rows live in fixed width binary records on disk, and every column gets its own hand built B+ tree. It handles table creation, insertion, projection, and compound SELECT queries with relational operators, AND/OR, and parentheses.",
+    "tags": ["C++", "databases", "data structures", "systems"],
+    "repo": ""
   },
   {
-    "title": "sfml graphing calculator",
+    "title": "SFML graphing calculator",
     "year": "2024",
-    "description": "A desktop graphing calculator that parses expressions and renders functions in an interactive SFML interface.",
-    "tags": ["C++", "SFML"]
+    "description": "A native C++ graphing calculator with interactive pan and zoom, equation entry, and clickable persistent history. The expression engine is built without any parser libraries: it tokenizes infix input, runs it through a shunting-yard parser, and evaluates on a stack based RPN engine before sampling each function at pixel width for SFML to render. It supports precedence, parentheses, unary negatives, variables, constants, exponentiation, and the common math functions, all on top of stack and queue structures I built on a custom linked list.",
+    "tags": ["C++", "SFML", "parsing", "data structures", "UI/UX"],
+    "repo": "https://github.com/aditgautam/graphing-calculator"
   },
   {
     "title": "interactive battleship",
     "year": "2024",
-    "description": "A complete take on the classic strategy game, with interactive placement, turn logic, and a responsive game board.",
-    "tags": ["game design", "C++"]
+    "description": "A desktop C++ take on Battleship with graphical fleet placement, turn based play, and dual board rendering in SFML. A hand built rules engine handles placement, collision, attacks, and win detection, and the AI opponent follows a logical attack pattern against a human player.",
+    "tags": ["C++", "SFML", "game development", "UI/UX"],
+    "repo": "https://github.com/aditgautam/battleship"
   }
 ]
