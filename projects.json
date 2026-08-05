@@ -5,7 +5,7 @@
     "description": [
       "A historical scoring database for competitive indoor marching percussion. It turns 127 scattered CompetitionSuite recaps into one queryable history of 4,441 performances and 56,910 caption level scores. A correction aware Python pipeline handles ingestion and derivation, using stable keys, content hashes, reviewed resolution rules, and SQLite views to rebuild the whole database reproducibly.",
       "The browser app downloads the 23 MB SQLite database and runs indexed SQL through sql.js and WebAssembly, powering season leaderboards, show recaps, ensemble histories, and interactive D3 score trends.",
-      "A companion research pipeline predicts an ensemble's end of season score from its debut performance, building season aware cohorts and evaluating Ridge and gradient boosting models with temporal cross-validation, ablations, clustered bootstrap intervals, and a genuinely untouched 2025-2026 holdout. Ridge landed at 2.676 MAE and 0.769 R² across 207 held out performances."
+      "A companion research pipeline predicts an ensemble's end of season score from its debut performance, building season aware cohorts and evaluating Ridge and gradient boosting models with temporal cross-validation, ablations, clustered bootstrap intervals, and an untouched 2025-2026 holdout. Ridge landed at 2.676 MAE and 0.769 R² across 207 held out performances."
     ],
     "tags": ["Python", "SQL", "JavaScript", "HTML/CSS", "data engineering", "machine learning", "UI/UX"],
     "links": [
